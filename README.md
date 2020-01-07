@@ -2,6 +2,8 @@
 
 Connect to mqtt through websocket, implementation for Vuejs 2
 
+Bring update to MQTT.js 3.0.0 WORK IN PROGRESS ! Don't use it.
+
 ## Example
 
 Example [Vue-Mqtt-Example](https://github.com/nik-zp/Vue-Mqtt-Example)
