@@ -8,6 +8,7 @@ export default {
         if (!connection) throw new Error("[Vue-Mqtt] cannot locate connection");
 
         let observer = new Observer(connection, options);
+        debugger
 
         Vue.prototype.$mqtt = observer.Mqtt;
 
@@ -33,6 +34,7 @@ export default {
                         this.$options.mqtt[key] = mqtt[key];
                     });
                 }
+                debugger
             },
             beforeDestroy() {
                 let mqtt = this.$options['mqtt'];
