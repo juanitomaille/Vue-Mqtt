@@ -7,7 +7,7 @@ export default new class {
         if (typeof callback === 'function') {
             this.listeners.has(label) || this.listeners.set(label, []);
             this.listeners.get(label).push({callback: callback, vm: vm});
-            debugger
+            console.log('inside 1')
 
             return true;
         }
@@ -41,11 +41,11 @@ export default new class {
             if (this.eq(label, key) && listeners && listeners.length) {
                 listeners.forEach((listener) => {
                     listener.callback.call(listener.vm, ...args, label);
-                    debugger
+                                console.log('inside 2')
                 });
                 ret = true;
             }
-            debugger
+                        console.log('inside 3')
         });
         return ret;
     }
