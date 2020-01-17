@@ -19,7 +19,6 @@ export default {
                 this.$options.mqtt = new Proxy({}, {
                     set: (target, key, value) => {
                         Emitter.addListener(key, value, this);
-                        console.log('[set mixin mqtt] vue instance :', this)
 
                         target[key] = value;
                         return true;
@@ -35,6 +34,7 @@ export default {
                     Object.keys(mqtt).forEach((key) => {
                         this.$options.mqtt[key] = mqtt[key];
                     });
+                console.log('[mixin mqtt] if mqtt statement')
                 }
             },
             beforeDestroy() {

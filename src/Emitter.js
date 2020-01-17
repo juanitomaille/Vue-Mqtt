@@ -40,10 +40,11 @@ export default new class {
             if (this.eq(label, key) && listeners && listeners.length) {
                 listeners.forEach((listener) => {
                     listener.callback.call(listener.vm, ...args, label);
-                    console.log('[Emitter.emit]')
+                    console.log('[Emitter.emit] inside listeners loop inside if statement')
                 });
                 ret = true;
             }
+            console.log('[Emitter.emit] inside listeners loop')
 
         });
         return ret;
