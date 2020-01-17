@@ -8,7 +8,7 @@ export default {
         if (!connection) throw new Error("[Vue-Mqtt] cannot locate connection");
 
         let observer = new Observer(connection, options);
-                    console.log('inside 4')
+
 
         Vue.prototype.$mqtt = observer.Mqtt;
 
@@ -19,6 +19,8 @@ export default {
                 this.$options.mqtt = new Proxy({}, {
                     set: (target, key, value) => {
                         Emitter.addListener(key, value, this);
+                        console.log('[set mixin mqtt] vue instance :', this)
+
                         target[key] = value;
                         return true;
                     },
@@ -34,7 +36,6 @@ export default {
                         this.$options.mqtt[key] = mqtt[key];
                     });
                 }
-                            console.log('inside 5')
             },
             beforeDestroy() {
                 let mqtt = this.$options['mqtt'];

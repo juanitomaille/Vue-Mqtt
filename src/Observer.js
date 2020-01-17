@@ -13,7 +13,6 @@ export default class {
         this.Mqtt.on('message', (topic, payload, packet) => {
             Emitter.emit(topic, payload);
         });
-                    console.log('inside constructor observer')
     }
 
 }
