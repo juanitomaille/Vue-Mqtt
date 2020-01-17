@@ -1,8 +1,8 @@
 {
   "name": "vue-mqtt",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Connect to mqtt through websocket, implementation for Vuejs 2",
-  "homepage": "https://github.com/nik-zp/vue-mqtt",
+  "homepage": "https://github.com/juanitomaille/vue-mqtt",
   "main": "dist/build.js",
   "scripts": {
     "build": "webpack --progress --hide-modules"
@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nik-zp/vue-mqtt.git"
+    "url": "https://github.com/juanitomaille/vue-mqtt.git"
   },
   "author": "Nikolai Paschenko",
   "license": "MIT",
   "dependencies": {
-    "mqtt": "^2.18.8"
+    "mqtt": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
